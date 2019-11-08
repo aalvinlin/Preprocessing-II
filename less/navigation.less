@@ -1,1 +1,53 @@
 // Navigation Styles here
+
+header {
+
+    .dashed_bottom_border();
+
+    padding: 2% 0;
+
+    div {
+        .display_flex(space-between, center);
+
+        @media @tablet {
+            padding: 0 (100% - @tablet_screen_percentage) / 2;
+        }
+
+        @media @mobile {
+            flex-direction: column;
+          }
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    a:hover, a:active {
+        text-decoration: underline;
+    }
+
+    nav {
+        
+        width: 60%;
+        
+        @media @mobile {
+            width: 100%;
+            
+          }
+
+        .display_flex(flex-end, center);
+
+        a{
+            display: inline-block;
+            width: 25%;
+
+            font-size: 1.5rem;
+            line-height: 3rem;
+
+            text-align: center;
+        }
+    }
+
+
+}
