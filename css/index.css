@@ -133,7 +133,8 @@ html {
   font-size: 62.5%;
 }
 html,
-body {
+body,
+textarea {
   font-family: 'Roboto', sans-serif;
 }
 h1,
@@ -177,6 +178,11 @@ header div {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 1000px) {
+  header div {
+    padding: 0 2.5%;
+  }
+}
 @media (max-width: 500px) {
   header div {
     flex-direction: column;
@@ -191,14 +197,14 @@ header a:active {
   text-decoration: underline;
 }
 header nav {
-  width: 50%;
+  width: 60%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 @media (max-width: 500px) {
   header nav {
-    width: 95%;
+    width: 100%;
   }
 }
 header nav a {
@@ -222,7 +228,7 @@ header nav a {
   font-size: 1.6rem;
   padding: 20px;
 }
-@media (max-width: 500px) {
+@media (max-width: 1000px) {
   .home {
     display: flex;
     justify-content: center;
@@ -237,14 +243,14 @@ header nav a {
 .home .welcome img {
   margin-bottom: 1%;
 }
-@media (max-width: 500px) {
+@media (max-width: 1000px) {
   .home .welcome img {
     margin-bottom: 2%;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 1000px) {
   .home .welcome {
-    width: 90%;
+    width: 95%;
   }
 }
 .home .content-section {
@@ -252,6 +258,11 @@ header nav a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+@media (max-width: 1000px) {
+  .home .content-section {
+    width: 95%;
+  }
 }
 @media (max-width: 500px) {
   .home .content-section {
@@ -327,9 +338,9 @@ header nav a {
   width: 75%;
   margin: 0 auto 30px;
 }
-@media (max-width: 500px) {
+@media (max-width: 1000px) {
   .home .content-destination {
-    width: 90%;
+    width: 95%;
     margin-top: 20px;
     padding-bottom: 30px;
     margin-bottom: 0px;
@@ -339,7 +350,7 @@ header nav a {
 .home .content-destination img {
   border-radius: 10px;
 }
-@media (max-width: 500px) {
+@media (max-width: 1000px) {
   .home .content-destination img {
     width: 100%;
   }
@@ -350,7 +361,7 @@ header nav a {
   display: flex;
   justify-content: space-between;
 }
-@media (max-width: 500px) {
+@media (max-width: 1000px) {
   .home .content-pick {
     flex-direction: column;
     width: 70%;
@@ -361,24 +372,99 @@ header nav a {
   width: 30%;
   margin-bottom: 30px;
 }
-@media (max-width: 500px) {
+@media (max-width: 1000px) {
   .home .content-pick .destination {
     width: 100%;
   }
 }
 .home .content-pick .destination .btn a {
+  background-color: teal;
+  color: white;
+  border-radius: 10px;
   text-align: center;
   display: inline-block;
   width: 80%;
   font-size: 1.8rem;
   line-height: 2em;
   text-decoration: none;
-  background-color: teal;
-  color: white;
-  border-radius: 10px;
+}
+.home .content-pick .destination .btn a:hover {
+  background-color: #00999a;
+}
+@media (max-width: 1000px) {
+  .home .content-pick .destination .btn a {
+    width: 50%;
+    margin: 0px auto !important;
+  }
 }
 @media (max-width: 500px) {
   .home .content-pick .destination .btn a {
-    width: 100%;
+    width: 80%;
   }
+}
+.home .content-plan {
+  width: 100%;
+  border-top: 2px dashed #C0C0C0;
+  padding-top: 2%;
+}
+@media (max-width: 1000px) {
+  .home .content-plan {
+    width: 95%;
+  }
+}
+.home .content-plan form {
+  width: 75%;
+  margin: 5% auto;
+}
+@media (max-width: 1000px) {
+  .home .content-plan form {
+    width: 80%;
+  }
+}
+@media (max-width: 500px) {
+  .home .content-plan form {
+    width: 95%;
+  }
+}
+.home .content-plan form label {
+  display: inline-block;
+  min-width: 25%;
+  font-size: 2rem;
+  line-height: 2em;
+  color: #17A2B8;
+  margin-right: 5%;
+}
+.home .content-plan form input {
+  border-radius: 5px;
+  font-size: 2rem;
+  padding-left: 2%;
+  color: #17A2B8;
+}
+.home .content-plan form textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 5%;
+  border-radius: 5px;
+  color: #17A2B8;
+}
+.home .content-plan form .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto;
+}
+.home .content-plan form .btn a {
+  background-color: teal;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  display: inline-block;
+  width: 80%;
+  font-size: 1.8rem;
+  line-height: 2em;
+  text-decoration: none;
+  width: 50%;
+}
+.home .content-plan form .btn a:hover {
+  background-color: #00999a;
 }

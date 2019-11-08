@@ -9,6 +9,10 @@ header {
     div {
         .display_flex(space-between, center);
 
+        @media @tablet {
+            padding: 0 (100% - @tablet_screen_percentage) / 2;
+        }
+
         @media @mobile {
             flex-direction: column;
           }
@@ -25,10 +29,11 @@ header {
 
     nav {
         
-        width: 50%;
+        width: 60%;
         
         @media @mobile {
-            width: 95%;
+            width: 100%;
+            
           }
 
         .display_flex(flex-end, center);
